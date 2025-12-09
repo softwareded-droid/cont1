@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  font-family: 'Bodoni MT', serif;
+  color: #001f4d;
+}
+
+.top-bar {
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.logo .load {
+  color: #00bfff;
+}
+
+.logo .lab {
+  color: #001f4d;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.menu-button {
+  font-size: 16px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #001f4d;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.menu-button:hover {
+  color: #00bfff;
+}
+
+.menu-button.genxpert {
+  color: #00bfff;
+}
+
+/* MODAL */
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  width: 340px;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  color: #001f4d;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #00bfff;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #00bfff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  background: #0099cc;
+}
+
+/* Banner */
+.full-banner {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.full-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoadLab Interface</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      font-family: 'Bodoni MT', serif;
+      color: #001f4d;
+    }
+
+    .top-bar {
+      max-width: 850px;
+      margin: 20px auto;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .logo .load {
+      color: #00bfff;
+    }
+
+    .logo .lab {
+      color: #001f4d;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .menu-button {
+      font-size: 16px;
+      font-weight: bold;
+      background: none;
+      border: none;
+      color: #001f4d;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      font-family: inherit;
+      text-decoration: none;
+    }
+
+    .menu-button:hover {
+      color: #00bfff;
+    }
+
+    .menu-button.genxpert {
+      color: #00bfff;
+    }
+
+    /* ---------------------------- */
+    /*   MODAL LOGIN                */
+    /* ---------------------------- */
+
+    .modal-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background: white;
+      width: 340px;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      color: #001f4d;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 2px solid #00bfff;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    .close-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #00bfff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .close-btn:hover {
+      background: #0099cc;
+    }
+
+    /* ---------------------------- */
+    /*   BANNER CON IMAGEN          */
+    /* ---------------------------- */
+
+    .full-banner {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+    }
+
+    .full-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Encabezado -->
+  <div class="top-bar">
+    <div class="logo">
+      <span class="load">Load</span><span class="lab">Lab</span>
+    </div>
+
+    <div class="menu">
+      <a href="labtech.html" class="menu-button">LabTech</a>
+      <a href="GenScan.html" class="menu-button">GenScan</a>
+      <a href="SimuLab.html" class="menu-button">SimuLab</a>
+      <a href="GenXpert.html" class="menu-button genxpert">GenXpert</a>
+
+      <button class="menu-button" id="loginBtn">Login</button>
+    </div>
+  </div>
+
+  <!-- Modal login -->
+  <div class="modal-bg" id="modalBg">
+    <div class="modal">
+      <h2>Registro de Usuario</h2>
+
+      <input type="text" placeholder="Nombre completo" id="nombre">
+      <input type="email" placeholder="Correo electrónico" id="correo">
+      <input type="text" placeholder="Nombre de usuario" id="usuario">
+
+      <button class="close-btn" id="closeModal">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="full-banner">
+    <img src="ADN.jpg" alt="Estructura de ADN">
+  </div>
+
+  <!-- AQUÍ TERMINA LA PARTE QUE PEDISTE -->
+
+  <script>
+    const loginBtn = document.getElementById("loginBtn");
+    const modalBg = document.getElementById("modalBg");
+    const closeModal = document.getElementById("closeModal");
+
+    loginBtn.addEventListener("click", () => {
+      modalBg.style.display = "flex";
+    });
+
+    closeModal.addEventListener("click", () => {
+      modalBg.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modalBg) {
+        modalBg.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
