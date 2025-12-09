@@ -1,0 +1,31 @@
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 50, 0.05);
+    border-top: 3px solid #00bfff;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #001f4d;
+    margin: 0 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #001f4d;
+}
+
+/* Activación visual */
+.hover-active {
+    color: #00bfff !important;
+}
